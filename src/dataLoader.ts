@@ -5,7 +5,7 @@ export const ColorDataLoader = () => {
 	return ['green', 'red', 'blue', 'yellow'];
 }
 
-export const EmployeeDataLoader = (callback: (employees: IEmployee[]) => void) => {
+export const EmployeeDataLoaderOLD = (callback: (employees: IEmployee[]) => void) => {
 	setTimeout(() => {
 		callback([
 			{
@@ -24,7 +24,7 @@ export const EmployeeDataLoader = (callback: (employees: IEmployee[]) => void) =
 	}, 1000)
 }
 
-export const EmployeeDataLoader3 = (callback: (employees: IEmployee[]) => void) => {
+export const EmployeeDataLoader = (callback: (employees: IEmployee[]) => void) => {
 	(async () => {
 		const url = 'https://edwardtanguay.vercel.app/share/employees.json';
 		const response = await axios.get(url);
